@@ -5,4 +5,5 @@ package pdm.ifpb.edu.br.petshop;
  */
 public class testando {
     //so testando
+    private  String teste;
 }
