@@ -19,4 +19,6 @@ public class MainActivity extends AppCompatActivity {
         this.btcadastro = (Button) findViewById(R.id.btcadastro);
         this.btlistar = (Button) findViewById(R.id.btlistar);
     }
+
+    // testando verificando se deu certo
 }
