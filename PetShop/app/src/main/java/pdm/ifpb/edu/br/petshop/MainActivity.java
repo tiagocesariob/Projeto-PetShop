@@ -3,12 +3,8 @@ package pdm.ifpb.edu.br.petshop;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     private Button btcadastro, btlistar;
@@ -41,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent it = new Intent(MainActivity.this, CadastroActivity.class);
                 startActivity(it);
             }else{
-                Intent it = new Intent(MainActivity.this, ListAnimalActivity.class);
+
+                Intent it = new Intent(MainActivity.this, ListarActivity.class);
                 startActivity(it);
             }
         }

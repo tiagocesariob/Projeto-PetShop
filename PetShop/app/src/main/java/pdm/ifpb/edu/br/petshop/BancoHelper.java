@@ -10,7 +10,7 @@ import android.util.Log;
  */
 public class BancoHelper extends SQLiteOpenHelper {
     private static final String BANCO = "petshop.db";
-    private static final int VERSAO = 4;
+    private static final int VERSAO = 1;
 
     public BancoHelper(Context context) {
         super(context, BANCO, null, VERSAO);
