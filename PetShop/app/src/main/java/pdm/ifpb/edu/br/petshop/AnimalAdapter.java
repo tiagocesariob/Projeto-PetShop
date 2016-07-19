@@ -99,7 +99,7 @@ return null; //null so para nao ficar com error
             view = li.inflate(R.layout.animal_layout, null);
         }else view = convertView;
 
-        TextView tv = (TextView) view.findViewById(R.id.tvNomePessoaLayout);
+        TextView tv = (TextView) view.findViewById(R.id.tvNomeAnimalLayout);
         tv.setText(p.getNome());
 
         return view;
