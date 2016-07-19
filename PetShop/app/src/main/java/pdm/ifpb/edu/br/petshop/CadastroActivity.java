@@ -1,5 +1,6 @@
 package pdm.ifpb.edu.br.petshop;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +39,8 @@ public class CadastroActivity extends AppCompatActivity {
         public void onClick(View v) {
             String nome = CadastroActivity.this.etnome.getText().toString();
             CadastroActivity.this.ad.inserir(new Animal(nome));
-
+            Intent it = new Intent(CadastroActivity.this, ListarActivity.class);
+            startActivity(it);
         }
     }
 }
