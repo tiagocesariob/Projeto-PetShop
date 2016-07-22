@@ -2,6 +2,8 @@ package pdm.ifpb.edu.br.petshop;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
+
+
 
 
 public class AnimalAdapter extends BaseAdapter {
@@ -91,16 +95,28 @@ return null; //null so para nao ficar com error
     }*/
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view;
+        final View view;
         Animal p = this.lista.get(position);
+
 
         if (convertView == null){
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = li.inflate(R.layout.animal_layout, null);
+
         }else view = convertView;
 
         TextView tv = (TextView) view.findViewById(R.id.tvNomeAnimalLayout);
         tv.setText(p.getNome());
+
+        //acrescentei endereco
+        TextView tv1 = (TextView) view.findViewById(R.id.tvEnderecoAnimalLayout);
+        tv1.setText(p.getEndereco());
+
+        //acrescentei telefone
+        TextView tv2 = (TextView) view.findViewById(R.id.tvTelefoneAnimalLayout);
+        tv2.setText(p.getTelefone());
+        //tv2.setAutoLinkMask(Linkify.PHONE_NUMBERS);
+
 
         return view;
     }

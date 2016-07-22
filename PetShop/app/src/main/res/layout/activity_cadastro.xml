@@ -8,8 +8,20 @@
     tools:context="pdm.ifpb.edu.br.petshop.CadastroActivity">
 
     <EditText
-        android:hint="nome do animal"
+        android:hint="Nome do Animal"
         android:id="@+id/etnome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:hint="Endereço do Animal"
+        android:id="@+id/etendereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:hint="Telefone do Dono do Animal"
+        android:id="@+id/ettelefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -22,6 +22,8 @@ import java.util.List;
     public void inserir(Animal novo) {
         ContentValues cv = new ContentValues();
         cv.put("nome", novo.getNome());
+        cv.put("endereco", novo.getEndereco());
+        cv.put("telefone", novo.getTelefone());
         this.banco.getWritableDatabase().insert(TABELA, null, cv);
     }
 
@@ -30,6 +32,8 @@ import java.util.List;
     public void atualizar(Animal obj) {
         ContentValues cv = new ContentValues();
         cv.put("nome", obj.getNome());
+        cv.put("endereco", obj.getEndereco());
+        cv.put("telefone", obj.getTelefone());
         this.banco.getWritableDatabase().update(TABELA, cv,"id = ?", new String[]{""+obj.getId()});
     }
 
@@ -53,7 +57,7 @@ import java.util.List;
     //so ta buscando um atributo o  nome depois tem que colocar mais
     @Override
     public List<Animal> get() {
-        String[] colunas = {"id", "nome"};
+        String[] colunas = {"id", "nome", "endereco","telefone"};
         List<Animal> lista = new ArrayList<Animal>();
 
         Cursor c = this.banco.getReadableDatabase().query(TABELA, colunas, null, null, null, null, "nome");
@@ -63,6 +67,8 @@ import java.util.List;
                 Animal a = new Animal();
                 a.setId(c.getInt(c.getColumnIndex(colunas[0])));
                 a.setNome(c.getString(1));
+                a.setEndereco(c.getString(2));
+                a.setTelefone(c.getString(3));
                 lista.add(a);
             }while (c.moveToNext());
         }

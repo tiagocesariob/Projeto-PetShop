@@ -20,7 +20,7 @@ public class BancoHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sql = "create table animal(" +
                 "id integer primary key autoincrement not null, " +
-                "nome string);";
+                "nome string, endereco string, telefone string);";
         db.execSQL(sql);
         Log.i("PETSHOP", "Tabela animal criada.");
     }

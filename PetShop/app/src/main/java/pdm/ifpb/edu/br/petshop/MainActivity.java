@@ -3,11 +3,14 @@ package pdm.ifpb.edu.br.petshop;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.util.Linkify;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button btcadastro, btlistar;
+    // private Context context;
+   // private Button btligar;
 
 
     @Override
@@ -17,11 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
         this.loadComponentes();
         this.defineListeners();
+
+       // btligar.setAutoLinkMask(Linkify.PHONE_NUMBERS);
+
     }
 
     private void loadComponentes() {
         this.btcadastro = (Button) findViewById(R.id.btcadastro);
         this.btlistar = (Button) findViewById(R.id.btlistar);
+
+       // this.btligar = (Button) findViewById(R.id.btligar);
     }
 
     private void defineListeners() {
@@ -43,4 +51,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    /*public void ligar(View view){
+    LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    view = li.inflate(R.layout.animal_layout, null);
+}*/
+
+
 }

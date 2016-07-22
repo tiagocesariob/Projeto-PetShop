@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+android:layout_weight="10"
     tools:context="pdm.ifpb.edu.br.petshop.ListarActivity">
 
     <ListView
+        android:layout_weight="1"
         android:id="@+id/lvAnimais"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/call"
+        android:autoLink="phone"
+        android:layout_weight="9"
+        android:text="telefone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
