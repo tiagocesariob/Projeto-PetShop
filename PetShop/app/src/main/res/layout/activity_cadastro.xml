@@ -7,30 +7,76 @@
     android:orientation="vertical"
     tools:context="pdm.ifpb.edu.br.petshop.CadastroActivity">
 
-    <EditText
-        android:hint="Nome do Animal"
-        android:id="@+id/etnome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <EditText
-        android:hint="Endereço do Animal"
-        android:id="@+id/etendereco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:hint="Nome do Animal"
+            android:id="@+id/etnome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <EditText
-        android:hint="Telefone "
-        android:id="@+id/ettelefone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:hint="Endereço do Animal"
+            android:id="@+id/etendereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <ImageButton
-        android:layout_gravity="center"
-        android:src="@drawable/salvar"
-        android:id="@+id/btsalvar"
-        android:text="salvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:hint="Telefone "
+            android:id="@+id/ettelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Foto"
+                android:id="@+id/btFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_gravity="center"
+                android:src="@drawable/salvar"
+                android:id="@+id/btsalvar"
+                android:text="salvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>
