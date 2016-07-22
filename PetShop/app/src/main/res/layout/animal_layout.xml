@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="nome animal"
+        android:text="Nome do Animal"
         android:id="@+id/tvNomeAnimalLayout"
         android:textSize="20sp"
         android:textColor="@color/colorPrimaryDark"
@@ -15,7 +15,8 @@
         android:gravity="center"/>
 
     <TextView
-        android:text="endereco animal"
+
+        android:text="Endereço do animal"
         android:id="@+id/tvEnderecoAnimalLayout"
         android:textSize="20sp"
         android:textColor="@color/colorPrimaryDark"
@@ -25,6 +26,7 @@
 
     <TextView
         android:text="Telefone do Dono"
+        android:inputType="phone"
         android:autoLink="phone"
         android:id="@+id/tvTelefoneAnimalLayout"
         android:textSize="20sp"
@@ -33,5 +35,37 @@
         android:layout_height="wrap_content"
         android:gravity="center"/>
 
+<LinearLayout
 
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageButton
+
+        android:src="@drawable/excluir"
+        android:text="Deletar"
+        android:onClick="deletar"
+        android:id="@+id/deletar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:src="@drawable/editar"
+        android:text="Editar"
+        android:onClick="editar"
+        android:id="@+id/editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:src="@drawable/telefone"
+        android:text="Telefonar"
+        android:autoLink="phone"
+        android:onClick="telefonar"
+        android:id="@+id/telefonar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
 </LinearLayout>

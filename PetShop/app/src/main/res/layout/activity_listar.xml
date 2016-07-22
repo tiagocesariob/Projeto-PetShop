@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:layout_weight="10"
-    tools:context="pdm.ifpb.edu.br.petshop.ListarActivity">
+    tools:context="pdm.ifpb.edu.br.petshop.ListarActivity"
+    android:layout_weight="10">
 
     <ListView
         android:layout_weight="1"
@@ -14,13 +14,12 @@ android:layout_weight="10"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-
     <Button
-        android:id="@+id/call"
-        android:autoLink="phone"
-        android:layout_weight="9"
-        android:text="telefone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:id="@+id/bthome"
+        android:layout_gravity="right"
+        android:text="Ir para Home"
+        android:elevation="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

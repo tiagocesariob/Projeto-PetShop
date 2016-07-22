@@ -22,7 +22,7 @@ import java.util.List;
 public class ListarActivity extends AppCompatActivity {
     private ListView listView;
     private AnimalDAO pd;
-    private Button call;
+   private Button bthome;
 
 
     @Override
@@ -35,16 +35,14 @@ public class ListarActivity extends AppCompatActivity {
 
         this.atualizaAdapter();
 
-        call.setOnClickListener(new View.OnClickListener() {
+        bthome.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent callIntent = new Intent(Intent.ACTION_DIAL);
-
-                startActivity(callIntent);
+                Intent it = new Intent(ListarActivity.this, MainActivity.class);
+                startActivity(it);
             }
         });
-        
 
 
     }
@@ -55,7 +53,7 @@ public class ListarActivity extends AppCompatActivity {
     private void instanciaComponentesInterface(){
 
         this.listView = (ListView) findViewById(R.id.lvAnimais);
-        this.call = (Button) findViewById(R.id.call);
+        this.bthome = (Button) findViewById(R.id.bthome);
 
     }
 

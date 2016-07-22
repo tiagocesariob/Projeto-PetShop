@@ -3,17 +3,18 @@ package pdm.ifpb.edu.br.petshop;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.util.Linkify;
+
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class CadastroActivity extends AppCompatActivity {
 
     private EditText etnome;
     private EditText etendereco;
     private EditText ettelefone;
-    private Button btsalvar;
+    private ImageButton btsalvar;
     private AnimalDAO ad;
 
     @Override
@@ -29,7 +30,7 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void loadComponentes(){
-        this.btsalvar = (Button) findViewById(R.id.btsalvar);
+        this.btsalvar = (ImageButton) findViewById(R.id.btsalvar);
         this.etnome = (EditText) findViewById(R.id.etnome);
         this.etendereco = (EditText) findViewById(R.id.etendereco);
         this.ettelefone = (EditText) findViewById(R.id.ettelefone);

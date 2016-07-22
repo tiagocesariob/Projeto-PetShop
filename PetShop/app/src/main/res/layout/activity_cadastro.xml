@@ -20,12 +20,14 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:hint="Telefone do Dono do Animal"
+        android:hint="Telefone "
         android:id="@+id/ettelefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <Button
+    <ImageButton
+        android:layout_gravity="center"
+        android:src="@drawable/salvar"
         android:id="@+id/btsalvar"
         android:text="salvar"
         android:layout_width="wrap_content"

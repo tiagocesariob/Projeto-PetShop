@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -68,33 +69,12 @@ return null; //null so para nao ficar com error
         tv.setText(lista.get(position).getNome());
 
 
-        Button editarBt = (Button) layout.findViewById(R.id.editar);
-        editarBt.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(context, CadastroActivity.class);
-                intent.putExtra("nome", lista.get(auxPosition).getNome());
-               // intent.putExtra("email", lista.get(auxPosition).getEmail());
-                intent.putExtra("id", lista.get(auxPosition).getId());
-                context.startActivity(intent);
-            }
-        });
 
-        Button deletarBt = (Button) layout.findViewById(R.id.deletar);
-        deletarBt.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View arg0) {
-                AnimalDAO bd = new AnimalDAO(context);
-                bd.remover(lista.get(auxPosition));
 
-                layout.setVisibility(View.GONE);
-            }
-        });
 
-        return layout;
     }*/
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         final View view;
         Animal p = this.lista.get(position);
 
@@ -115,7 +95,47 @@ return null; //null so para nao ficar com error
         //acrescentei telefone
         TextView tv2 = (TextView) view.findViewById(R.id.tvTelefoneAnimalLayout);
         tv2.setText(p.getTelefone());
-        //tv2.setAutoLinkMask(Linkify.PHONE_NUMBERS);
+
+
+        ImageButton deletarBt = (ImageButton) view.findViewById(R.id.deletar);
+        deletarBt.setOnClickListener(new ImageButton.OnClickListener(){
+            @Override
+            public void onClick(View arg0) {
+
+                AnimalDAO bd = new AnimalDAO(context);
+                bd.remover(lista.get(position));
+                view.setVisibility(View.GONE);
+
+            }
+        });
+
+        ImageButton editarBt = (ImageButton) view.findViewById(R.id.editar);
+        editarBt.setOnClickListener(new ImageButton.OnClickListener(){
+            @Override
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(context, CadastroActivity.class);
+                intent.putExtra("id", lista.get(position).getId());
+                intent.putExtra("nome", lista.get(position).getNome());
+                intent.putExtra("endereco", lista.get(position).getEndereco());
+                intent.putExtra("telefone", lista.get(position).getTelefone());
+                context.startActivity(intent);
+            }
+        });
+
+        ImageButton telefonarBT = (ImageButton) view.findViewById(R.id.telefonar);
+        telefonarBT.setOnClickListener(new ImageButton.OnClickListener(){
+            @Override
+            public void onClick(View arg0) {
+
+                        String num= lista.get(position).getTelefone();
+                        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                        callIntent.setData(Uri.parse("tel:"+ num));
+                        context.startActivity(callIntent);
+
+            }
+        });
+
 
 
         return view;
