@@ -54,7 +54,7 @@ import java.util.List;
     }
 
 
-    //so ta buscando um atributo o  nome depois tem que colocar mais
+
     @Override
     public List<Animal> get() {
         String[] colunas = {"id", "nome", "endereco","telefone"};

@@ -43,36 +43,8 @@ public class AnimalAdapter extends BaseAdapter {
         return position;
     }
 
-    /*@Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-      *//*  View view;
-        Animal p = this.lista.get(position);
 
 
-       tem que implementar esta incompleto
-
-
-
-        return view;*//*
-
-return null; //null so para nao ficar com error
-    }*/
-
-    /*@Override
-    public View getView(int position, View arg1, ViewGroup arg2) {
-        final int auxPosition = position;
-
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.animal, null);
-
-        TextView tv = (TextView) layout.findViewById(R.id.nome);
-        tv.setText(lista.get(position).getNome());
-
-
-
-
-
-    }*/
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         final View view;
@@ -114,6 +86,8 @@ return null; //null so para nao ficar com error
             @Override
             public void onClick(View arg0) {
 
+                AnimalDAO bd = new AnimalDAO(context);
+                bd.remover(lista.get(position));
                 Intent intent = new Intent(context, CadastroActivity.class);
                 intent.putExtra("id", lista.get(position).getId());
                 intent.putExtra("nome", lista.get(position).getNome());

@@ -9,8 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button btcadastro, btlistar;
-    // private Context context;
-   // private Button btligar;
+
 
 
     @Override
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         this.loadComponentes();
         this.defineListeners();
 
-       // btligar.setAutoLinkMask(Linkify.PHONE_NUMBERS);
+
 
     }
 
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         this.btcadastro = (Button) findViewById(R.id.btcadastro);
         this.btlistar = (Button) findViewById(R.id.btlistar);
 
-       // this.btligar = (Button) findViewById(R.id.btligar);
+
     }
 
     private void defineListeners() {
@@ -52,10 +51,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*public void ligar(View view){
-    LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    view = li.inflate(R.layout.animal_layout, null);
-}*/
+
 
 
 }

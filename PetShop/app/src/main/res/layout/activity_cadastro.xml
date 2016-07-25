@@ -20,6 +20,7 @@
         android:layout_height="wrap_content" />
 
     <EditText
+        android:inputType="phone"
         android:hint="Telefone "
         android:id="@+id/ettelefone"
         android:layout_width="wrap_content"
